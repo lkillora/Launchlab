@@ -10,8 +10,8 @@ from launchlab import LAUNCHLAB, create_launchlab_token, get_new_global_config
 from solfunctions import SIGNER, HELIUS_API_KEY, send_pushover_alert
 
 WS_URL = f'wss://mainnet.helius-rpc.com/?api-key={HELIUS_API_KEY}'
-RAYDIUM_MULTISIG = 'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm'
-FETCH_GLOBAL_CONFIG = True
+RAYDIUM_MULTISIG = 'Dtdvj8K1x6ib1hKXYdPxvty6k2K8ibJnX7GTZGCg837v' # 'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm'
+FETCH_GLOBAL_CONFIG = False #True
 
 
 
@@ -29,13 +29,13 @@ async def process_message(message):
 
             try:
                 for log in logs:
-                    if 'Instruction: CreateConfig' in log:
+                    if True: #'Instruction: CreateConfig' in log:
                         try:
                             if FETCH_GLOBAL_CONFIG:
                                 global_config = get_new_global_config(sig)
                             else:
                                 global_config = None
-                            send_response1 = await create_launchlab_token(global_config=global_config, signer=SIGNER, production=True)
+                            send_response1 = await create_launchlab_token(global_config=global_config, signer=SIGNER, production=False)
                             if send_response1 is not None:
                                 print(f'SEND RESPONSE1: {send_response1}')
                                 send_pushover_alert(f'SNIPED! {send_response1}', priority=2)

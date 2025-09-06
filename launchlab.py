@@ -250,10 +250,7 @@ async def create_launchlab_token(
         buy_ix
     ]
     signers = [signer, mint]
-    if production:
-        response = await send_tx(instructions, signers=signers, mainnet=True)
-    else:
-        response = await simulate_tx(instructions, signers=signers, mainnet=True)
-
+    response = await send_tx(instructions, signers=signers, mainnet=True)
+    # response = await simulate_tx(instructions, signers=signers, mainnet=True)
     return response
 
