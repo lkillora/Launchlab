@@ -89,7 +89,7 @@ async def create_launchlab_token(
     else:
         quote_mint = wsol
         tip_amount = 5_000_000
-        amount_in = 10
+        amount_in = 1000
         mint = Keypair()
         name = 'The Golden Twap'
         symbol = 'TWAP'
