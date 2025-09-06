@@ -1,0 +1,13 @@
+pandas
+requests
+python-dotenv
+base58
+solana
+solders
+redis
+pandas
+pynacl
+requests
+numpy
+Pillow
+borsh-construct
