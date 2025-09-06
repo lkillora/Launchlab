@@ -1,0 +1,1 @@
+nohup python3 launchlab_sniper.py > launchlab.log 2>&1 &

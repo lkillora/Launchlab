@@ -1,6 +1,5 @@
 import time
 import base58
-from nacl.public import PublicKey
 from solders.pubkey import Pubkey
 from spl.token.instructions import get_associated_token_address, create_associated_token_account
 from solders.keypair import Keypair
