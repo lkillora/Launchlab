@@ -29,7 +29,7 @@ async def process_message(message):
 
             try:
                 for log in logs:
-                    if True: #'Instruction: CreateConfig' in log:
+                    if 'Instruction: CreateConfig' in log:
                         try:
                             if FETCH_GLOBAL_CONFIG:
                                 global_config = get_new_global_config(sig)
