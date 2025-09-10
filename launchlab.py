@@ -75,7 +75,7 @@ async def create_launchlab_token(
 
 ):
     if global_config is None:
-        global_config = Pubkey.from_string('6s1xP3hpbAfFoNtUNF8mfHsjr2Bd97JxFJRWLbL6aHuX')
+        global_config = Pubkey.from_string('EPiZbnrThjyLnoQ6QQzkxeFqyL5uyg9RzNHHAudUPxBz')
 
     if production:
         quote_mint = usd1
@@ -89,7 +89,7 @@ async def create_launchlab_token(
     else:
         quote_mint = wsol
         tip_amount = 5_000_000
-        amount_in = 1000
+        amount_in = 10
         mint = Keypair()
         name = 'The Golden Twap'
         symbol = 'TWAP'

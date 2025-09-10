@@ -11,7 +11,7 @@ from solfunctions import SIGNER, HELIUS_API_KEY, send_pushover_alert
 
 WS_URL = f'wss://mainnet.helius-rpc.com/?api-key={HELIUS_API_KEY}'
 RAYDIUM_MULTISIG = 'EXZY7FPccNuEvgHZMCMpww2Fen8oLWBSJzdgCsX3Djwm'
-FETCH_GLOBAL_CONFIG = True
+FETCH_GLOBAL_CONFIG = False
 
 
 
